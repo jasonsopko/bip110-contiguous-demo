@@ -1,0 +1,9 @@
+tx.bin
+from_ram.jxl
+block.bin
+carve.jxl
+carve.png
+img.jxl
+out.png
+__pycache__/
+tmp*/

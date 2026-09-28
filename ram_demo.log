@@ -1,0 +1,18 @@
+mainnet witness scripts: 25, sizes [775, 1546]
+node /Satoshi:29.4.2(testnode0)/Knots:20260508/, height 120, fork at 100, node args: ['-testactivationheight=blake2b@100', '-rdtsexpiry=2000000000', '-corepolicy=0']
+testmempoolaccept under Knots default policy + RDTS: {'txid': 'ecd8e1ab52e3e4121046e4cee62778692c3c77c6506a268e574444098f52988f', 'wtxid': 'fd898e8482d8e791f633a4fe65cf4e16e3dc5af13bf381d2644fb51ce43bc8e6', 'usage': 42704, 'allowed': True, 'vsize': 10574, 'fees': {'base': Decimal('0.00015000'), 'effective-feerate': Decimal('0.00001418'), 'effective-includes': ['fd898e8482d8e791f633a4fe65cf4e16e3dc5af13bf381d2644fb51ce43bc8e6']}}
+mined ecd8e1ab52e3e4121046e4cee62778692c3c77c6506a268e574444098f52988f in regtest block 122 (5e52597b8617d4ac6d0db2603b42235cb758af851b533eb2b860e60ec13ea104), tx vsize 10574
+raw regtest tx: JXL signature at byte 1084, tail of 37975 bytes == the mainnet file
+dead-branch push of 256 bytes: allowed=True 
+dead-branch push of 257 bytes: allowed=False mempool-script-verify-flag-failed (Push value size limit exceeded)
+scanned 312 MiB of writable memory of bitcoind
+witness script #1 (1,546 bytes) found whole at 5 addresses: ['0x7b489402f498', '0x7b4898016fb8', '0x7b489802a7c0', '0x7b48a40112f1', '0x7b48b4022bb1']
+  JXL signature at 0x7b489402f49c: complete 37,975-byte file
+  JXL signature at 0x7b4898016fbc: complete 37,975-byte file
+  JXL signature at 0x7b489802a7c4: script buffer only (1,546 bytes, unrelated heap after it)
+  JXL signature at 0x7b48a40112f5: complete 37,975-byte file
+  JXL signature at 0x7b48b4022bb5: complete 37,975-byte file
+4 contiguous copies of the whole image in bitcoind memory
+djxl on the bytes read from /proc/<pid>/mem: ['Decoded to pixels.', '486 x 224, 3.91 MP/s [3.91, 3.91], 1 reps, 12 threads.']
+bytes read from bitcoind RAM == the file cut from the mainnet tx, byte for byte
+Tests successful
