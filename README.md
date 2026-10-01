@@ -6,6 +6,10 @@ The witness script. BIP110 caps pushes and stack items at 256 bytes, not the P2W
 
 ![the image, read out of bitcoind's memory](from_ram.png)
 
+## Why this exists
+
+The transaction is the one Knots PR [#400](https://github.com/bitcoinknots/bitcoin/pull/400) is about. The Knots data carrier filter counted data in an `OP_FALSE OP_IF` envelope but not in an `OP_1 OP_NOTIF` one, so this shape passed the default policy and was mined. #400 counts a constant-guarded dead branch the same way, which rejects this transaction and the same shape in other forms, with no new rejections across the three million transactions since the fork. Whether the image was really contiguous came up while that PR was being discussed, and this repository is the answer to that part.
+
 ## What the script does
 
 1. Starts one node from the official Knots 29.4.2 binary on regtest with the BLAKE2b fork, and so RDTS/BIP110, active from height 100, and the Knots default relay policy on (`-corepolicy=0`).
